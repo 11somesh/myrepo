@@ -16,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag someeshfandat/docker-image-autobuild:latest
+      run: docker build . --file Dockerfile --tag someeshfandat/myredis
     - name: Push the Docker image
-      run: docker login -u someeshfandat -p ${{ secrets.DOCKER_TOKEN }} && docker push someeshfanda/docker-image-autobuild:latest
+      run: docker login -u someeshfandat -p ${{ secrets.DOCKER_TOKEN }} && docker push someeshfandat/myredis
